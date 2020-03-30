@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Bold.woff) format("woff"), url(../fonts/OpenSans-Bold.woff2) format("woff2"), url(../fonts/OpenSans-Bold.ttf) format("truetype");
+    font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Regular.woff) format("woff"), url(../fonts/OpenSans-Regular.woff2) format("woff2"), url(../fonts/OpenSans-Regular.ttf) format("truetype");
+    font-weight: 400;
+	font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.header {
+    position: relative;
+    box-sizing: border-box;
+    padding: 32px 20px 84px;
+    background-image: url("../images/football_767.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    color: #ffffff;
+}
+
+.header::before {
+	/*content: "";
+	
+    position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	background-color: #0a0e34;
+	opacity: 0.6;*/
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 136px;
+    width: 133px;
+
+    fill: #ffffff;
+}
+
+.site-title {
+    margin: 0 auto 86px;
+
+    font-size: 28px;
+    line-height: 31px;
+    text-transform: uppercase;
+}
+
+.site-title-sentence {
+    display: block;
+}
+
+.site-title-sentence:last-of-type {
+    margin-top: 30px;
+    margin-left: 45px;
+}
+
+.app-button {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 35px;
+
+    width: 100%;
+    max-width: 280px;
+
+    border-radius: 17px;
+
+    background-color: #5e42b0;
+
+    font-size: 8px;
+    color: #ffffff;
+}
+
+.apple-button::before, .google-button::before {
+    content: "";
+    display: block;
+    flex: none;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+
+    background-image: url("../svg/apple_logo_black.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.google-button::before {
+    background-image: url("../svg/google-play.svg");
+}
+
+.store-description {
+    flex: none;
+    width: 85px;
+}
+
+.store-invitation, .store-name {
+    display: block;
+}
+
+.store-name {
+    font-weight: bold;
+}
+
+.app-button:nth-of-type(n + 2) {
+    margin-top: 14px;
+}
