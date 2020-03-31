@@ -62,8 +62,6 @@ body {
     margin-right: auto;
     margin-bottom: 136px;
     width: 133px;
-
-    fill: #ffffff;
 }
 
 .site-title {
@@ -138,14 +136,14 @@ body {
     margin-top: 14px;
 }
 
-/* ==Athlets== */
+/* ==Athlets and Players== */
 
 .section {
     position: relative;
     box-sizing: border-box;
 }
 
-.section::before {
+.section-athlets::before {
     content: "";
     position: absolute;
     top: 80px;
@@ -153,6 +151,18 @@ body {
     width: 192px;
     height: 281px;
     background-image: url("../images/footballer_192.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.section-players::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 151px);
+    width: 302px;
+    height: 248px;
+    background-image: url("../images/basketballer_302.png");
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -187,6 +197,16 @@ body {
 }
 
 .advice-blue .advice-number {
+    border-color: #ffffff;
+}
+
+.advice-dark {
+    background-color: #090c35;
+    color: #ffffff;
+}
+
+.advice-dark .advice-number {
+    color: #8765dd;
     border-color: #ffffff;
 }
 
@@ -227,7 +247,6 @@ body {
 .advice-header {
     margin-bottom: 25px;
 
-    line-height: 34px;
     font-size: 23px;
     letter-spacing: 1px;
     color: #c1c1c1;
@@ -240,4 +259,111 @@ body {
     font-size: 15px;
     letter-spacing: 1px;
     line-height: 18px;
+}
+
+/* ==Active, Contact, Work== */
+
+.card-image {
+    position: relative;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.card-image-active {
+    background-image: url("../images/be-active_640.jpg");
+}
+
+.card-image-contact {
+    background-image: url("../images/find-contact_640.jpg");
+}
+
+.card-image-work {
+    background-image: url("../images/work-it_640.jpg");
+}
+
+.card-content-container {
+    position: relative;
+    padding: 35px 20px 75px;
+}
+
+.card-number-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20px;
+    top: -58px;
+    width: 70px;
+    height: 70px;
+
+    background-color: #5e42b0;
+}
+
+.card-number {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-weight: 700;
+    border-bottom: 4px solid #8f7bc8;
+    border-radius: 1px;
+}
+
+.card-header {
+    font-size: 28px;
+    color: #e7e7e7;
+}
+
+/* ==Footer== */
+
+.footer {
+    background-image: url("../images/game_767.jpg");
+}
+
+.footer-container {
+    padding: 100px 20px 10px;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 74px;
+    margin: 0 auto 60px;
+
+    background-color: #6d49cb;
+
+    border-radius: 15px;
+}
+
+.footer-logo {
+    width: 60px;
+}
+
+.download-header {
+    margin-bottom: 12px;
+
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.footer-slogan {
+    margin-bottom: 75px;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #9b8ec1;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.footer-text-logo {
+    margin-top: 80px;
+    margin-bottom: 10px;
 }
