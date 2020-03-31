@@ -174,7 +174,6 @@ body {
 }
 
 .advice:first-of-type {
-    padding-top: 80px;
     background-color: #fafafa;
 }
 
@@ -197,6 +196,10 @@ body {
     max-width: 320px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.advice-container:first-of-type {
+    padding-top: 80px;
 }
 
 .advice-number {
