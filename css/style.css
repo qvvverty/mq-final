@@ -24,21 +24,19 @@ body {
     min-width: 320px;
 }
 
-/* ==Header== */
-
-.header {
+.header, .footer {
     position: relative;
-
+    
     background-image: url("../images/football_767.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-color: #0a0e34;
-
+    
     color: #ffffff;
 }
 
-.header::before {
+.header::before, footer::before {
 	content: "";
 	
     position: absolute;
@@ -51,7 +49,7 @@ body {
 	opacity: 0.9;
 }
 
-.header-container {
+.header-container, .footer-container {
     position: relative;
     box-sizing: border-box;
     max-width: 320px;
@@ -59,6 +57,8 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* ==Header== */
 
 .logo {
     display: block;
@@ -411,8 +411,8 @@ body {
     }
 
     .section {
-        display: flex;
-        flex-direction: column;
+        /*display: flex;
+        flex-direction: column;*/
         /*align-items: flex-end;*/
         /*max-width: 960px;*/
     }
@@ -431,6 +431,56 @@ body {
 
     .advice-header {
         letter-spacing: 2px;
+    }
+
+    .card-header {
+        font-family: "Open Sans";
+        font-weight: 700;
+        font-size: 80px;
+        letter-spacing: 0.7px;
+        color: #e7e7e7;
+        text-transform: uppercase;
+    }
+
+    .card-number {
+        font-size: 24px;
+    }
+
+    .card-content {
+        font-size: 24px;
+        letter-spacing: 1.2px;
+        line-height: 28px;
+    }
+
+    .logo-wrapper {
+        width: 130px;
+        height: 135px;
+        margin: 0 auto 55px;
+    
+        background-color: #6d49cb;
+    
+        border-radius: 25px;
+    }
+
+    .download-header {
+        margin-top: 110px;
+
+        font-size: 79px;
+        letter-spacing: 4.7px;
+        font-weight: 700;
+        text-transform: uppercase;
+        white-space: normal;
+    }
+    
+    .footer-slogan {
+        margin-bottom: 280px;
+
+        text-align: center;
+        font-size: 36px;
+        letter-spacing: 0px;
+        color: #9b8ec1;
+        font-weight: 400;
+        text-transform: uppercase;
     }
 }
 
@@ -594,22 +644,8 @@ body {
         height: 115px;
     }
     
-    .card-number {
-        font-size: 24px;
-    }
-    
     .card-header {
         margin-bottom: 10px;
-    
-        font-size: 80px;
-        letter-spacing: 0.7px;
-        color: #e7e7e7;
-    }
-    
-    .card-content {
-        font-size: 24px;
-        letter-spacing: 1.2px;
-        line-height: 28px;
     }
 
     /* === */
@@ -619,47 +655,16 @@ body {
     }
     
     .footer-container {
+        min-width: 641px;
+        max-width: 960px;
         padding: 130px 20px 10px;
-    }
-    
-    .logo-wrapper {
-        width: 130px;
-        height: 135px;
-        margin: 0 auto 55px;
-    
-        background-color: #6d49cb;
-    
-        border-radius: 15px;
     }
     
     .footer-logo {
         width: 102px;
         height: 87px;
     }
-    
-    .download-header {
-        margin-top: 110px;
-        /*margin-bottom: 0;*/
-
-        font-size: 79px;
-        /*line-height: 0;*/
-        letter-spacing: 4.7px;
-        font-weight: 700;
-        text-transform: uppercase;
-        white-space: normal;
-    }
-    
-    .footer-slogan {
-        margin-bottom: 280px;
-
-        text-align: center;
-        font-size: 36px;
-        letter-spacing: 0px;
-        color: #9b8ec1;
-        font-weight: 400;
-        text-transform: uppercase;
-    }
-    
+        
     .footer-text-logo {
         margin-top: 55px;
         margin-bottom: 10px;
@@ -715,30 +720,77 @@ body {
 
     /* === */
 
-    .advice {
-        padding-right: 180px;
+    .section-athlets {
+        /*display: flex;
+        flex-direction: column;*/
+        /*align-items: center;*/
     }
 
-    .section:nth-child(even) .advice {
+    /*.advice {
+        padding-right: 180px;
+    }*/
+
+    .advice-wrapper {
+        box-sizing: border-box;
+        max-width: 1920px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /*.section:nth-child(even) .advice {
+        padding-left: 160px;
+    }*/
+
+    .section:nth-child(even) .advice-wrapper {
         padding-left: 160px;
     }
 
     .advice-container {
         padding: 50px 20px 50px 0;
-        width: 48%;
-        max-width: 730px;
+        /*width: 48%;*/
+        /*min-width: 730px;*/
+        max-width: 48%;
         margin-right: 0;
     }
 
     .section-header {
         margin-bottom: 75px;
+        /*position: relative;*/
     }
+
+    /*.section-athlets .section-header::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        left: -615px;
+        z-index: 1;
+
+        width: 566px;
+        height: 908px;
+        background-image: url("../images/footballer_566.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .section-players .section-header::before {
+        content: "";
+        position: absolute;
+        top: -70px;
+        left: 615px;
+
+        width: 991px;
+        height: 815px;
+        background-image: url("../images/basketballer_991.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }*/
 
     .advice-header {
         font-size: 36px;
     }
 
     .section-athlets::before {
+        /*display: none;*/
         top: 30px;
         left: 380px;
         z-index: 1;
@@ -749,6 +801,7 @@ body {
     }
 
     .section-players::before {
+        /*display: none;*/
         top: 25px;
         left: auto;
         right: 115px;
@@ -803,65 +856,65 @@ body {
     }
 
     .card-content-container {
-        display: flex;
+        /*display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: center;*/
         /*align-items: space-around;*/
-        margin-left: 0;
-        margin-right: 0;
+        /*margin-left: 0;
+        margin-right: 0;*/
         width: 50%;
-        padding-left: 200px;
+        padding-left: 120px;
+        padding-top: 235px;
         /*padding: 235px 120px;*/
     }
 
-    /*.card:nth-child(even) .card-content-container {
+    .card:nth-child(even) .card-content-container {
         padding-left: 175px;
-    }*/
-    
-    .card-number-wrapper {
-        left: 30px;
-        top: -90px;
-        width: 115px;
-        height: 115px;
     }
-    
-    .card-number {
-        font-size: 24px;
+
+    .card:nth-child(even) .card-header {
+        margin-bottom: 50px;
+    }
+
+    .card-number-wrapper {
+        left: -80px;
+        top: 210px;
+        width: 165px;
+        height: 155px;
+    }
+
+    .card:nth-child(even) .card-number-wrapper {
+        left: auto;
+        right: -80px;
     }
     
     .card-header {
         margin-bottom: 85px;
-    
-        font-size: 80px;
-        /*line-height: 0;*/
-        letter-spacing: 0.7px;
-        color: #e7e7e7;
-    }
-    
-    .card-content {
-        font-size: 24px;
-        letter-spacing: 1.2px;
-        line-height: 28px;
     }
 
     /* === */
 
     .footer {
-        background-image: url("../images/game_1280.jpg");
+        background-image: url("../images/game_1920.jpg");
     }
     
     .footer-container {
-        padding: 130px 20px 10px;
+        padding: 230px 20px 10px;
+        max-width: 1920px;
+    }
+
+    .footer-logo-slogan {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 155px;
+    }
+
+    .footer-headline-slogan {
+        margin-left: 30px;
     }
     
     .logo-wrapper {
-        width: 130px;
-        height: 135px;
-        margin: 0 auto 55px;
-    
-        background-color: #6d49cb;
-    
-        border-radius: 15px;
+        margin: 0;
     }
     
     .footer-logo {
@@ -870,30 +923,20 @@ body {
     }
     
     .download-header {
-        margin-top: 110px;
-        /*margin-bottom: 0;*/
-
-        font-size: 79px;
-        /*line-height: 0;*/
-        letter-spacing: 4.7px;
-        font-weight: 700;
-        text-transform: uppercase;
-        white-space: normal;
+        margin-top: 0;
     }
     
     .footer-slogan {
-        margin-bottom: 280px;
+        margin-bottom: 0;
+        margin-top: 10px;
 
-        text-align: center;
-        font-size: 36px;
-        letter-spacing: 0px;
-        color: #9b8ec1;
-        font-weight: 400;
-        text-transform: uppercase;
+        font-size: 30px;
+        line-height: 0;
+        text-align: start;
     }
     
     .footer-text-logo {
-        margin-top: 55px;
-        margin-bottom: 10px;
+        margin-top: 265px;
+        margin-bottom: 40px;
     }
 }
