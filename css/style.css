@@ -95,7 +95,6 @@ body {
 .app-button {
     box-sizing: border-box;
     display: flex;
-    /*justify-content: center;*/
     padding-left: 80px;
     align-items: center;
 
@@ -130,7 +129,6 @@ body {
 
 .store-description {
     flex: none;
-    /*width: 85px;*/
 }
 
 .store-invitation, .store-name {
@@ -284,7 +282,6 @@ body {
 .card-content-container {
     position: relative;
     box-sizing: border-box;
-    /*max-width: 640px;*/
     margin-left: auto;
     margin-right: auto;
     padding: 25px 20px 75px;
@@ -410,23 +407,13 @@ body {
         margin-top: 0;
     }
 
-    .section {
-        /*display: flex;
-        flex-direction: column;*/
-        /*align-items: flex-end;*/
-        /*max-width: 960px;*/
-    }
-
     .section:nth-child(even) .advice-container {
-        /*align-items: flex-start;*/
         margin-left: 0;
         padding-left: 20px;
     }
 
-    .section:nth-child(even) .advice-container { /* ?? up??? */
-        /*align-items: flex-start;*/
+    .section:nth-child(even) .advice-container {
         margin-left: 0;
-        /*padding-left: 20px;*/
     }
 
     .advice-header {
@@ -537,18 +524,13 @@ body {
     /* === */
 
     .section {
-        max-width: 960px; /*?????*/
+        max-width: 960px;
     }
 
-    .section:nth-child(even) .advice-container { /* ?? up??? */
-        /*align-items: flex-start;*/
+    .section:nth-child(even) .advice-container {
         margin-left: 0;
         padding-left: 20px;
     }
-
-    /*.advice {
-        width: 100%;
-    }*/
 
     .advice-container {
         box-sizing: border-box;
@@ -632,7 +614,6 @@ body {
 
     .card-content-container {
         margin-left: 0;
-        /*max-width: 960px;*/
         width: 100%;
         padding: 55px 25px 100px;
     }
@@ -687,15 +668,21 @@ body {
     }
     
     .site-title {
-        margin-bottom: 245px;
+        margin-bottom: 215px;
     
         font-size: 90px;
-        letter-spacing: 4.7px;
+        letter-spacing: 4.6px;
+    }
+
+    .site-title-sentence:first-of-type {
+        white-space: nowrap;
     }
     
     .site-title-sentence:last-of-type {
-        margin-top: 15px;
-        margin-left: 450px;
+        margin-top: -15px;
+        padding-left: 26%;
+
+        line-height: 86px;
     }
     
     .buttons {
@@ -720,15 +707,9 @@ body {
 
     /* === */
 
-    .section-athlets {
-        /*display: flex;
-        flex-direction: column;*/
-        /*align-items: center;*/
+    .section-players {
+        overflow-x: hidden;
     }
-
-    /*.advice {
-        padding-right: 180px;
-    }*/
 
     .advice-wrapper {
         box-sizing: border-box;
@@ -737,28 +718,22 @@ body {
         margin-left: auto;
     }
 
-    /*.section:nth-child(even) .advice {
-        padding-left: 160px;
-    }*/
-
     .section:nth-child(even) .advice-wrapper {
         padding-left: 160px;
     }
 
     .advice-container {
         padding: 50px 20px 50px 0;
-        /*width: 48%;*/
-        /*min-width: 730px;*/
         max-width: 48%;
         margin-right: 0;
     }
 
     .section-header {
         margin-bottom: 75px;
-        /*position: relative;*/
+        position: relative;
     }
 
-    /*.section-athlets .section-header::before {
+    .section-athlets .section-header::before {
         content: "";
         position: absolute;
         top: -60px;
@@ -777,37 +752,38 @@ body {
         position: absolute;
         top: -70px;
         left: 615px;
+        overflow-block: hidden;
 
         width: 991px;
         height: 815px;
         background-image: url("../images/basketballer_991.png");
         background-repeat: no-repeat;
         background-position: center center;
-    }*/
+    }
+
+    @media (max-width: 1665px) {
+        .section-players .section-header::before {
+            left: 350px;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .section-players .section-header::before {
+            top: -90px;
+            left: 250px;
+        }
+    }
 
     .advice-header {
         font-size: 36px;
     }
 
     .section-athlets::before {
-        /*display: none;*/
-        top: 30px;
-        left: 380px;
-        z-index: 1;
-
-        width: 566px;
-        height: 908px;
-        background-image: url("../images/footballer_566.png");
+        display: none;
     }
 
     .section-players::before {
-        /*display: none;*/
-        top: 25px;
-        left: auto;
-        right: 115px;
-        width: 991px;
-        height: 815px;
-        background-image: url("../images/basketballer_991.png");
+        display: none;
     }
 
     .section .advice:first-of-type .advice-container {
@@ -856,16 +832,9 @@ body {
     }
 
     .card-content-container {
-        /*display: flex;
-        flex-direction: column;
-        justify-content: center;*/
-        /*align-items: space-around;*/
-        /*margin-left: 0;
-        margin-right: 0;*/
         width: 50%;
         padding-left: 120px;
         padding-top: 235px;
-        /*padding: 235px 120px;*/
     }
 
     .card:nth-child(even) .card-content-container {
