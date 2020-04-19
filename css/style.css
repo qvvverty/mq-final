@@ -70,8 +70,9 @@ a {
 
 .site-title {
   margin-bottom: 85px;
+
   font-size: 28px;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -99,7 +100,6 @@ a {
   border-radius: 17px;
   background-color: #5e42b0;
   font-size: 8px;
-  letter-spacing: 0.5px;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -220,13 +220,15 @@ a {
 
 .advice-number {
   margin-right: 10px;
+
+  border-bottom: 4px solid #5e42b0;
+  border-radius: 1px;
+
   vertical-align: 0.5em;
   font-size: 0.6em;
   letter-spacing: 1px;
   color: #000000;
   font-weight: 700;
-  border-bottom: 4px solid #5e42b0;
-  border-radius: 1px;
 }
 
 .advice-header {
@@ -297,14 +299,16 @@ a {
 
 .card-header {
   margin-bottom: 15px;
+
   font-size: 28px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   color: #e7e7e7;
+  text-transform: uppercase;
 }
 
 .card-content {
   font-size: 16px;
-  letter-spacing: 0.7px;
+  letter-spacing: 1px;
   line-height: 20px;
 }
 
@@ -401,7 +405,6 @@ a {
   .card-header {
     font-weight: 700;
     font-size: 80px;
-    letter-spacing: 0.7px;
     color: #e7e7e7;
     text-transform: uppercase;
   }
@@ -412,7 +415,7 @@ a {
 
   .card-content {
     font-size: 24px;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     line-height: 28px;
   }
 
@@ -426,8 +429,9 @@ a {
 
   .download-header {
     margin-top: 110px;
+
     font-size: 79px;
-    letter-spacing: 4.7px;
+    letter-spacing: 5px;
     font-weight: 700;
     text-transform: uppercase;
     white-space: normal;
@@ -437,7 +441,7 @@ a {
     margin-bottom: 280px;
     text-align: center;
     font-size: 36px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #9b8ec1;
     font-weight: 400;
     text-transform: uppercase;
@@ -464,12 +468,12 @@ a {
     margin-bottom: 300px;
     padding-left: 55px;
     font-size: 64px;
-    letter-spacing: 3.2px;
+    letter-spacing: 3px;
   }
 
   .site-title-sentence:last-of-type {
     margin-top: 0;
-    margin-left: 110px;
+    margin-left: 105px;
     line-height: 74px;
   }
 
@@ -557,7 +561,7 @@ a {
 
   .advice-content {
     font-size: 16px;
-    letter-spacing: 0.9px;
+    letter-spacing: 1px;
     line-height: 28px;
   }
 
@@ -613,6 +617,10 @@ a {
     height: 87px;
   }
 
+  .download-header {
+    line-height: 85px;
+  }
+
   .footer-text-logo {
     margin-top: 55px;
     margin-bottom: 10px;
@@ -637,7 +645,7 @@ a {
   .site-title {
     margin-bottom: 215px;
     font-size: 90px;
-    letter-spacing: 4.6px;
+    letter-spacing: 5px;
   }
 
   .site-title-sentence:first-of-type {
@@ -656,12 +664,12 @@ a {
     max-width: 1280px;
   }
 
-  .buttons a:nth-child(even) .app-button {
-    margin-left: 25px;
+  .button-link:nth-child(odd) {
+    margin-right: 25px;
   }
 
-  .buttons a:nth-child(odd) .app-button {
-    margin-right: 25px;
+  .button-link:nth-child(even) {
+    margin-left: 25px;
   }
 
   .apple-button::before, .google-button::before {
