@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Open Sans";
-  src: url(../fonts/OpenSans-Bold.woff) format("woff"), url(../fonts/OpenSans-Bold.woff2) format("woff2"), url(../fonts/OpenSans-Bold.ttf) format("truetype");
+  src: url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url(../fonts/OpenSans-Regular.woff) format("woff"), url(../fonts/OpenSans-Regular.woff2) format("woff2"), url(../fonts/OpenSans-Regular.ttf) format("truetype");
+  src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -20,8 +20,9 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
   min-width: 320px;
+
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -30,12 +31,14 @@ a {
 
 .header, .footer {
   position: relative;
+
+  color: #ffffff;
+
   background-image: url("../images/football_767.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-color: #0a0e34;
-  color: #ffffff;
 }
 
 .header::before, footer::before {
@@ -45,27 +48,29 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
+
   background-color: #0a0e34;
   opacity: 0.9;
 }
 
 .header-container, .footer-container {
   position: relative;
+  
   box-sizing: border-box;
   max-width: 320px;
-  padding: 32px 20px 84px;
   margin-left: auto;
   margin-right: auto;
+  padding: 32px 20px 84px;
 }
 
 /* ==Header== */
 
 .logo {
   display: block;
+  width: 133px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 130px;
-  width: 133px;
+  margin-bottom: 128px;
 }
 
 .site-title {
@@ -73,6 +78,7 @@ a {
 
   font-size: 28px;
   letter-spacing: 1px;
+
   text-transform: uppercase;
 }
 
@@ -83,6 +89,7 @@ a {
 .site-title-sentence:last-of-type {
   margin-top: 15px;
   margin-left: 45px;
+
   line-height: 32px;
 }
 
@@ -92,16 +99,18 @@ a {
 }
 
 .app-button {
-  box-sizing: border-box;
   display: flex;
-  padding-left: 80px;
   align-items: center;
+  box-sizing: border-box;
   height: 35px;
-  border-radius: 17px;
-  background-color: #5e42b0;
+  padding-left: 80px;
+
   font-size: 8px;
+  
   color: #ffffff;
   text-transform: uppercase;
+  border-radius: 17px;
+  background-color: #5e42b0;
 }
 
 .apple-button::before, .google-button::before {
@@ -111,6 +120,7 @@ a {
   width: 24px;
   height: 24px;
   margin-right: 8px;
+
   background-image: url("../svg/apple_logo_black.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -140,16 +150,21 @@ a {
 
 .section {
   position: relative;
-  padding-top: 303px;
+
+  padding-top: 305px;
+
+  counter-reset: advice;
 }
 
 .section-athlets::before {
   content: "";
   position: absolute;
   top: 80px;
-  left: calc(50% - 96px);
+  left: calc(50% - 90px);
+
   width: 192px;
   height: 281px;
+
   background-image: url("../images/footballer_192.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -160,8 +175,10 @@ a {
   position: absolute;
   top: 80px;
   left: calc(50% - 151px);
+
   width: 302px;
   height: 248px;
+
   background-image: url("../images/basketballer_302.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -176,68 +193,75 @@ a {
 }
 
 .advice-blue {
-  background-color: #5e42b0;
   color: #ffffff;
+  background-color: #5e42b0;
 }
 
-.advice-blue .advice-number {
+.advice-blue .advice-header::before {
   border-color: #ffffff;
 }
 
 .advice-dark {
-  background-color: #090c35;
   color: #ffffff;
+  background-color: #090c35;
 }
 
-.advice-dark .advice-number {
+.advice-dark .advice-header::before {
   color: #8765dd;
   border-color: #ffffff;
 }
 
 .advice-container {
   box-sizing: border-box;
-  padding: 50px 20px 50px;
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+  padding: 55px 20px 50px;
 }
 
 .section-header {
   position: absolute;
   top: 10px;
   left: 20px;
+
   max-width: 320px;
 
   font-size: 50px;
-  color: #e7e7e7;
   font-weight: 700;
+
+  color: #e7e7e7;
   text-transform: uppercase;
 }
 
 .section .advice:first-of-type .advice-container {
-  padding-top: 80px;
-}
-
-.advice-number {
-  margin-right: 10px;
-
-  border-bottom: 4px solid #5e42b0;
-  border-radius: 1px;
-
-  vertical-align: 0.5em;
-  font-size: 0.6em;
-  letter-spacing: 1px;
-  color: #000000;
-  font-weight: 700;
+  padding-top: 78px;
 }
 
 .advice-header {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+
   font-size: 23px;
   letter-spacing: 1px;
-  color: #c1c1c1;
   font-weight: 700;
+
+  color: #c1c1c1;
   text-transform: uppercase;
+}
+
+.advice-header::before {
+  counter-increment: advice;
+  content: "0" counter(advice);
+
+  margin-right: 10px;
+
+  vertical-align: 0.5em;
+  font-size: 0.6em;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  color: #000000;
+  border-bottom: 4px solid #5e42b0;
+  border-radius: 1px;
 }
 
 .advice-content {
@@ -248,9 +272,15 @@ a {
 
 /* ==Active, Contact, Work== */
 
+.cards {
+  counter-reset: card;
+}
+
 .card-image {
   position: relative;
+
   height: 350px;
+
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -270,38 +300,50 @@ a {
 
 .card-content-container {
   position: relative;
+
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
   padding: 25px 20px 75px;
 }
 
+.card:last-of-type .card-content-container {
+  padding-bottom: 70px;
+}
+
 .card-number-wrapper {
   position: absolute;
+  top: -58px;
+  left: 20px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 20px;
-  top: -58px;
   width: 70px;
   height: 70px;
+
   background-color: #5e42b0;
 }
 
-.card-number {
+.card-number-wrapper::before {
+  counter-increment: card;
+  content: "0" counter(card);
+
   font-size: 14px;
   letter-spacing: 1px;
-  color: #ffffff;
   font-weight: 700;
+  
+  color: #ffffff;
   border-bottom: 4px solid #8f7bc8;
   border-radius: 1px;
 }
 
 .card-header {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 
   font-size: 28px;
   letter-spacing: 1px;
+
   color: #e7e7e7;
   text-transform: uppercase;
 }
@@ -328,9 +370,10 @@ a {
   align-items: center;
   width: 70px;
   height: 75px;
-  margin: 0 auto 50px;
-  background-color: #6d49cb;
+  margin: 0 auto 45px;
+
   border-radius: 15px;
+  background-color: #6d49cb;
 }
 
 .footer-logo {
@@ -342,16 +385,19 @@ a {
   font-size: 32px;
   letter-spacing: 2px;
   font-weight: 700;
+
   text-transform: uppercase;
   white-space: nowrap;
 }
 
 .footer-slogan {
   margin-bottom: 75px;
+
   font-size: 14px;
   letter-spacing: 1px;
-  color: #9b8ec1;
   font-weight: 400;
+
+  color: #9b8ec1;
   text-transform: uppercase;
 }
 
@@ -371,18 +417,20 @@ a {
     position: relative;
     top: 0;
     left: 0;
+
     margin-bottom: 25px;
-    max-width: auto;
 
     font-size: 80px;
   }
 
   .app-button {
-    padding-left: 45px;
-    height: 77px;
     width: 310px;
-    border-radius: 37px;
+    height: 77px;
+    padding-left: 45px;
+
     font-size: 14px;
+
+    border-radius: 37px;
   }
 
   .buttons a:nth-of-type(n+2) .app-button {
@@ -405,11 +453,12 @@ a {
   .card-header {
     font-weight: 700;
     font-size: 80px;
+
     color: #e7e7e7;
     text-transform: uppercase;
   }
 
-  .card-number {
+  .card-number-wrapper::before {
     font-size: 24px;
   }
 
@@ -423,27 +472,31 @@ a {
     width: 130px;
     height: 135px;
     margin: 0 auto 55px;
+
     background-color: #6d49cb;
     border-radius: 25px;
   }
 
   .download-header {
-    margin-top: 110px;
+    margin-top: 65px;
 
     font-size: 79px;
     letter-spacing: 5px;
     font-weight: 700;
+
     text-transform: uppercase;
     white-space: normal;
   }
 
   .footer-slogan {
     margin-bottom: 280px;
-    text-align: center;
+
     font-size: 36px;
     letter-spacing: 0;
-    color: #9b8ec1;
     font-weight: 400;
+
+    color: #9b8ec1;
+    text-align: center;
     text-transform: uppercase;
   }
 }
@@ -454,26 +507,28 @@ a {
   }
 
   .header-container {
-    min-width: 641px;
     max-width: 960px;
+    min-width: 641px;
     padding-bottom: 95px;
   }
 
   .logo {
-    margin-bottom: 160px;
     width: 205px;
+    margin-bottom: 160px;
   }
 
   .site-title {
     margin-bottom: 300px;
-    padding-left: 55px;
+    padding-left: 60px;
+
     font-size: 64px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
   }
 
   .site-title-sentence:last-of-type {
     margin-top: 0;
-    margin-left: 105px;
+    margin-left: 110px;
+
     line-height: 74px;
   }
 
@@ -490,7 +545,6 @@ a {
   }
 
   .store-description {
-    width: auto;
     white-space: nowrap;
   }
 
@@ -502,26 +556,38 @@ a {
 
   .section:nth-child(even) .advice-container {
     margin-left: 0;
-    padding-left: 20px;
+    padding-left: 30px;
+  }
+
+  .section:nth-child(even) .advice:first-of-type .advice-container {
+    padding-top: 65px;
   }
 
   .advice-container {
     box-sizing: border-box;
-    padding: 30px 20px 35px 0;
     width: 62%;
     max-width: 475px;
     margin-right: 0;
+    padding: 35px 20px 30px 0;
+  }
+
+  .section-header {
+    margin-bottom: 29px;
   }
 
   .advice-header {
+    margin-bottom: 15px;
+
     font-size: 32px;
   }
 
   .section-athlets::before {
     top: 90px;
-    left: -150px;
+    left: -160px;
+
     width: 497px;
     height: 699px;
+
     background-image: url("../images/footballer_497.png");
   }
 
@@ -529,8 +595,10 @@ a {
     top: 40px;
     left: auto;
     right: 0;
+
     width: 436px;
     height: 565px;
+
     background-image: url("../images/basketballer_436.png");
   }
 
@@ -540,21 +608,23 @@ a {
     }
 
     .section-players::before {
-      top: 0px;
+      top: 0;
     }
   }
 
   .section .advice:first-of-type .advice-container {
-    padding-top: 60px;
+    padding-top: 55px;
   }
 
-  .advice-number {
+  .advice-header::before {
     margin-right: 10px;
-    vertical-align: 0.5em;
+
     font-size: 0.6em;
     letter-spacing: 1px;
-    color: #000000;
     font-weight: 700;
+    
+    vertical-align: 0.5em;
+    color: #000000;
     border-bottom: 4px solid #5e42b0;
     border-radius: 1px;
   }
@@ -562,6 +632,7 @@ a {
   .advice-content {
     font-size: 16px;
     letter-spacing: 1px;
+
     line-height: 28px;
   }
 
@@ -584,20 +655,25 @@ a {
   }
 
   .card-content-container {
-    margin-left: 0;
     width: 100%;
-    padding: 55px 25px 100px;
+    margin-left: 0;
+    padding: 58px 25px 101px;
   }
 
   .card-number-wrapper {
     left: 30px;
     top: -90px;
+
     width: 115px;
     height: 115px;
   }
 
   .card-header {
     margin-bottom: 10px;
+  }
+
+  .card:last-of-type .card-content-container {
+    padding-bottom: 110px;
   }
 
   /* === */
@@ -643,7 +719,8 @@ a {
   }
 
   .site-title {
-    margin-bottom: 215px;
+    margin-bottom: 217px;
+
     font-size: 90px;
     letter-spacing: 5px;
   }
@@ -655,6 +732,7 @@ a {
   .site-title-sentence:last-of-type {
     margin-top: -15px;
     padding-left: 26%;
+
     line-height: 86px;
   }
 
@@ -680,8 +758,12 @@ a {
 
   /* === */
 
+  .section:nth-child(even) .advice:first-of-type .advice-container {
+    padding-top: 95px;
+  }
+
   .section-players {
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   .advice-wrapper {
@@ -692,18 +774,18 @@ a {
   }
 
   .section:nth-child(even) .advice-wrapper {
-    padding-left: 160px;
+    padding-left: 170px;
   }
 
   .advice-container {
-    padding: 50px 20px 50px 0;
     max-width: 48%;
     margin-right: 0;
+    padding: 50px 20px 50px 0;
   }
 
   .section-header {
-    margin-bottom: 75px;
     position: relative;
+    margin-bottom: 72px;
   }
 
   .section-athlets .section-header::before {
@@ -712,8 +794,10 @@ a {
     top: -60px;
     left: -615px;
     z-index: 1;
+
     width: 566px;
     height: 908px;
+
     background-image: url("../images/footballer_566.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -724,9 +808,10 @@ a {
     position: absolute;
     top: -70px;
     left: 615px;
-    overflow-block: hidden;
+
     width: 991px;
     height: 815px;
+
     background-image: url("../images/basketballer_991.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -745,7 +830,13 @@ a {
     }
   }
 
+  .advice-container {
+    padding-left: 9px;
+  }
+
   .advice-header {
+    margin-bottom: 16px;
+
     font-size: 36px;
   }
 
@@ -761,9 +852,10 @@ a {
     padding-top: 90px;
   }
 
-  .advice-number {
-    vertical-align: 0.5em;
+  .advice-header::before {
     font-size: 0.55em;
+
+    vertical-align: 0.5em;
   }
 
   .advice-content {
@@ -804,21 +896,29 @@ a {
 
   .card-content-container {
     width: 50%;
-    padding-left: 120px;
     padding-top: 235px;
+    padding-left: 120px;
   }
 
   .card:nth-child(even) .card-content-container {
-    padding-left: 175px;
+    padding-left: 9%;
   }
 
   .card:nth-child(even) .card-header {
     margin-bottom: 50px;
   }
 
+  
+  @media (max-width: 1700px) {
+    .card:nth-child(even) .card-header {
+      padding-right: 90px;
+    }
+  }
+
   .card-number-wrapper {
     left: -80px;
     top: 210px;
+
     width: 165px;
     height: 155px;
   }
@@ -839,8 +939,8 @@ a {
   }
 
   .footer-container {
-    padding: 230px 20px 10px;
     max-width: 1920px;
+    padding: 230px 20px 10px;
   }
 
   .footer-logo-slogan {
@@ -850,7 +950,7 @@ a {
   }
 
   .footer-headline-slogan {
-    margin-left: 30px;
+    margin-left: 33px;
   }
 
   .logo-wrapper {
@@ -863,19 +963,21 @@ a {
   }
 
   .download-header {
-    margin-top: 0;
+    margin-top: -7px;
   }
 
   .footer-slogan {
     margin-bottom: 0;
     margin-top: 10px;
+
     font-size: 30px;
     line-height: 0;
+
     text-align: start;
   }
 
   .footer-text-logo {
-    margin-top: 265px;
+    margin-top: 260px;
     margin-bottom: 40px;
   }
 }
