@@ -12,8 +12,6 @@
   font-style: normal;
 }
 
-/* ==Common== */
-
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +27,8 @@ a {
   text-decoration: none;
 }
 
-.header, .footer {
+.header,
+.footer {
   position: relative;
 
   color: #ffffff;
@@ -41,7 +40,8 @@ a {
   background-color: #0a0e34;
 }
 
-.header::before, footer::before {
+.header::before,
+.footer::before {
   content: "";
   position: absolute;
   top: 0;
@@ -53,7 +53,8 @@ a {
   opacity: 0.9;
 }
 
-.header-container, .footer-container {
+.header-container,
+.footer-container {
   position: relative;
   
   box-sizing: border-box;
@@ -62,8 +63,6 @@ a {
   margin-right: auto;
   padding: 32px 20px 84px;
 }
-
-/* ==Header== */
 
 .logo {
   display: block;
@@ -113,7 +112,8 @@ a {
   background-color: #5e42b0;
 }
 
-.apple-button::before, .google-button::before {
+.apple-button::before,
+.google-button::before {
   content: "";
   display: block;
   flex: none;
@@ -130,11 +130,8 @@ a {
   background-image: url("../svg/google-play.svg");
 }
 
-.store-description {
-  flex: none;
-}
-
-.store-invitation, .store-name {
+.store-invitation,
+.store-name {
   display: block;
 }
 
@@ -145,8 +142,6 @@ a {
 .buttons a:nth-of-type(n+2) .app-button {
   margin-top: 14px;
 }
-
-/* ==Athlets and Players== */
 
 .section {
   position: relative;
@@ -250,7 +245,7 @@ a {
 
 .advice-header::before {
   counter-increment: advice;
-  content: "0" counter(advice);
+  content: counter(advice, decimal-leading-zero);
 
   margin-right: 10px;
 
@@ -270,8 +265,6 @@ a {
   line-height: 18px;
 }
 
-/* ==Active, Contact, Work== */
-
 .cards {
   counter-reset: card;
 }
@@ -281,21 +274,13 @@ a {
 
   height: 350px;
 
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-color: #bbbbbb;
 }
 
-.card-image-active {
-  background-image: url("../images/be-active_640.jpg");
-}
-
-.card-image-contact {
-  background-image: url("../images/find-contact_640.jpg");
-}
-
-.card-image-work {
-  background-image: url("../images/work-it_640.jpg");
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-content-container {
@@ -327,7 +312,7 @@ a {
 
 .card-number-wrapper::before {
   counter-increment: card;
-  content: "0" counter(card);
+  content: counter(card, decimal-leading-zero);
 
   font-size: 14px;
   letter-spacing: 1px;
@@ -353,8 +338,6 @@ a {
   letter-spacing: 1px;
   line-height: 20px;
 }
-
-/* ==Footer== */
 
 .footer {
   background-image: url("../images/game_767.jpg");
@@ -405,8 +388,6 @@ a {
   margin-top: 80px;
   margin-bottom: 10px;
 }
-
-/* ==Media== */
 
 @media (min-width: 641px) {
   .section {
@@ -538,7 +519,8 @@ a {
     max-width: 960px;
   }
 
-  .apple-button::before, .google-button::before {
+  .apple-button::before,
+  .google-button::before {
     width: 45px;
     height: 45px;
     margin-right: 25px;
@@ -547,8 +529,6 @@ a {
   .store-description {
     white-space: nowrap;
   }
-
-  /* === */
 
   .section {
     max-width: 960px;
@@ -636,22 +616,8 @@ a {
     line-height: 28px;
   }
 
-  /* === */
-
   .card-image {
     height: 585px;
-  }
-
-  .card-image-active {
-    background-image: url("../images/be-active_960.jpg");
-  }
-
-  .card-image-contact {
-    background-image: url("../images/find-contact_960.jpg");
-  }
-
-  .card-image-work {
-    background-image: url("../images/work-it_960.jpg");
   }
 
   .card-content-container {
@@ -676,8 +642,6 @@ a {
     padding-bottom: 110px;
   }
 
-  /* === */
-
   .footer {
     background-image: url("../images/game_1280.jpg");
   }
@@ -694,6 +658,7 @@ a {
   }
 
   .download-header {
+    text-align: center;
     line-height: 85px;
   }
 
@@ -750,16 +715,23 @@ a {
     margin-left: 25px;
   }
 
-  .apple-button::before, .google-button::before {
+  .apple-button::before,
+  .google-button::before {
     width: 50px;
     height: 50px;
     margin-right: 25px;
   }
 
-  /* === */
-
   .section:nth-child(even) .advice:first-of-type .advice-container {
     padding-top: 95px;
+  }
+
+  .section:nth-child(even) .advice:nth-child(even) .advice-header {
+    margin-bottom: 25px;
+  }
+
+  .section:nth-child(even) .advice:nth-child(even) .advice-content {
+    margin-bottom: 30px;
   }
 
   .section-players {
@@ -864,8 +836,6 @@ a {
     line-height: 28px;
   }
 
-  /* === */
-
   .card {
     display: flex;
     max-width: 1920px;
@@ -882,18 +852,6 @@ a {
     height: 730px;
   }
 
-  .card-image-active {
-    background-image: url("../images/be-active_1024.jpg");
-  }
-
-  .card-image-contact {
-    background-image: url("../images/find-contact_1024.jpg");
-  }
-
-  .card-image-work {
-    background-image: url("../images/work-it_1024.jpg");
-  }
-
   .card-content-container {
     width: 50%;
     padding-top: 235px;
@@ -908,7 +866,6 @@ a {
     margin-bottom: 50px;
   }
 
-  
   @media (max-width: 1700px) {
     .card:nth-child(even) .card-header {
       padding-right: 90px;
@@ -931,8 +888,6 @@ a {
   .card-header {
     margin-bottom: 85px;
   }
-
-  /* === */
 
   .footer {
     background-image: url("../images/game_1920.jpg");
