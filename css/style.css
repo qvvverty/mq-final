@@ -211,7 +211,7 @@ a {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  padding: 55px 20px 50px;
+  padding: 55px 10px 50px 20px;
 }
 
 .section-header {
@@ -269,18 +269,15 @@ a {
   counter-reset: card;
 }
 
-.card-image {
+.card-image img {
   position: relative;
 
+  min-width: 100%;
   height: 350px;
+  min-height: 350px;
+  object-fit: cover;
 
   background-color: #bbbbbb;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .card-content-container {
@@ -289,7 +286,7 @@ a {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  padding: 25px 20px 75px;
+  padding: 25px 10px 75px 20px;
 }
 
 .card:last-of-type .card-content-container {
@@ -344,7 +341,12 @@ a {
 }
 
 .footer-container {
-  padding: 100px 20px 10px;
+  padding: 100px 0 10px;
+}
+
+.footer-container .buttons {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .logo-wrapper {
@@ -362,6 +364,10 @@ a {
 .footer-logo {
   width: 60px;
   height: 50px;
+}
+
+.footer-headline-slogan {
+  text-align: center;
 }
 
 .download-header {
@@ -423,10 +429,6 @@ a {
     padding-left: 20px;
   }
 
-  .section:nth-child(even) .advice-container {
-    margin-left: 0;
-  }
-
   .advice-header {
     letter-spacing: 2px;
   }
@@ -477,8 +479,12 @@ a {
     font-weight: 400;
 
     color: #9b8ec1;
-    text-align: center;
     text-transform: uppercase;
+  }
+
+  .footer-container .buttons {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -616,14 +622,16 @@ a {
     line-height: 28px;
   }
 
-  .card-image {
+  .card-image img {
     height: 585px;
+    min-height: 585px;
+    width: 100%;
   }
 
   .card-content-container {
     width: 100%;
     margin-left: 0;
-    padding: 58px 25px 101px;
+    padding: 53px 25px 103px;
   }
 
   .card-number-wrapper {
@@ -658,7 +666,6 @@ a {
   }
 
   .download-header {
-    text-align: center;
     line-height: 85px;
   }
 
@@ -752,7 +759,7 @@ a {
   .advice-container {
     max-width: 48%;
     margin-right: 0;
-    padding: 50px 20px 50px 0;
+    padding: 51px 20px 50px 0;
   }
 
   .section-header {
@@ -852,6 +859,11 @@ a {
     height: 730px;
   }
 
+  .card-image img {
+    width: 100%;
+    min-height: 730px;
+  }
+
   .card-content-container {
     width: 50%;
     padding-top: 235px;
@@ -859,7 +871,7 @@ a {
   }
 
   .card:nth-child(even) .card-content-container {
-    padding-left: 9%;
+    padding-left: 10%;
   }
 
   .card:nth-child(even) .card-header {
